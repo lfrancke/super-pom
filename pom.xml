@@ -4,7 +4,7 @@
 
     <groupId>de.lars-francke</groupId>
     <artifactId>super-pom</artifactId>
-    <version>1</version>
+    <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>My personal super POM</name>
     <description>A base POM</description>
