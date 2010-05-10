@@ -6,7 +6,7 @@
     <artifactId>super-pom</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>My personal super POM</name>
+    <name>super-pom</name>
     <description>A base POM</description>
     <url>https://github.com/lfrancke/super-pom</url>
 
@@ -18,7 +18,7 @@
 
     <ciManagement>
         <system>hudson</system>
-        <url>http://lars-server.fritz.box:8080/</url>
+        <url>http://lars-server.fritz.box:8080/job/super-pom/</url>
     </ciManagement>
 
     <distributionManagement>
