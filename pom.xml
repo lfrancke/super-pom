@@ -10,12 +10,21 @@
   <description>A base POM</description>
   <url>https://github.com/lfrancke/super-pom</url>
 
+  <!--
+    This should be overridden in each sub project as it is used
+    by the maven-release-plugin to make releases and by Sonar
+    to provide links to the project.
+  -->
   <scm>
     <url>https://github.com/lfrancke/super-pom</url>
     <connection>scm:git:git://github.com/lfrancke/super-pom.git</connection>
     <developerConnection>scm:git:git@github.com:lfrancke/super-pom.git</developerConnection>
   </scm>
 
+  <!--
+    This should be overridden in each sub project as it is used
+    by Sonar to provide links back to the Continuous Integration system.
+  -->
   <ciManagement>
     <system>hudson</system>
     <url>http://lars-server.fritz.box:8080/job/super-pom/</url>
@@ -60,11 +69,11 @@
         <plugin>
           <!--
               http://maven.apache.org/plugins/maven-antrun-plugin/
-              Last checked: 2010-03-26
+              Last checked: 2010-05-31
           -->
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.3</version>
+          <version>1.4</version>
         </plugin>
         <plugin>
           <!--
