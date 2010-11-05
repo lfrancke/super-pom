@@ -278,11 +278,11 @@
         <plugin>
           <!--
               http://maven.apache.org/plugins/maven-war-plugin/
-              Last checked: 2010-10-09
+              Last checked: 2010-11-05
           -->
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
-          <version>2.1</version>
+          <version>2.1.1</version>
         </plugin>
         <plugin>
           <!--
