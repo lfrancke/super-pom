@@ -6,6 +6,7 @@
   <artifactId>super-pom</artifactId>
   <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
+
   <name>super-pom</name>
   <description>A base POM</description>
   <url>https://github.com/lfrancke/super-pom</url>
@@ -27,19 +28,19 @@
   -->
   <ciManagement>
     <system>hudson</system>
-    <url>http://lars-server.fritz.box:8080/job/super-pom/</url>
+    <url>http://ci.lars-francke.com/job/super-pom</url>
   </ciManagement>
 
   <distributionManagement>
     <snapshotRepository>
       <id>lars.snapshots</id>
       <name>Snapshot Distribution Repository</name>
-      <url>http://lars-server.fritz.box:8081/nexus/content/repositories/snapshots/</url>
+      <url>http://repository.lars-francke.com/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
       <id>lars.releases</id>
       <name>Release Distribution Repository</name>
-      <url>http://lars-server.fritz.box:8081/nexus/content/repositories/releases/</url>
+      <url>http://repository.lars-francke.com/content/repositories/releases/</url>
     </repository>
   </distributionManagement>
 
@@ -217,8 +218,8 @@
           <version>2.1</version>
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
-            <!--<releaseProfiles>gbif-release</releaseProfiles>-->
-            <arguments>-Pgbif-release</arguments>
+            <!--<releaseProfiles>release</releaseProfiles>-->
+            <arguments>-Prelease</arguments>
           </configuration>
         </plugin>
         <plugin>
@@ -511,7 +512,7 @@
               <configuration>
                 <type>runtime</type>
                 <properties>
-                  <cargo.server.settings>gbif-staging</cargo.server.settings>
+                  <cargo.server.settings>staging</cargo.server.settings>
                 </properties>
               </configuration>
 
