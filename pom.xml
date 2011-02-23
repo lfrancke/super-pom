@@ -9,7 +9,6 @@
 
   <name>super-pom</name>
   <description>A base POM</description>
-  <url>https://github.com/lfrancke/super-pom</url>
 
   <!--
     This should be overridden in each sub project as it is used
@@ -122,6 +121,15 @@
             <showDeprecation>true</showDeprecation>
             <showWarnings>true</showWarnings>
           </configuration>
+        </plugin>
+        <plugin>
+          <!--
+              http://maven.apache.org/plugins/maven-dependency-plugin/
+              Last checked: 2011-02-23
+          -->
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>2.2</version>
         </plugin>
         <plugin>
           <!--
