@@ -242,11 +242,11 @@
         <plugin>
           <!--
               http://maven.apache.org/scm/
-              Last checked: 2011-02-12
+              Last checked: 2011-04-01
           -->
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-plugin</artifactId>
-          <version>1.4</version>
+          <version>1.5</version>
         </plugin>
         <plugin>
           <!--
