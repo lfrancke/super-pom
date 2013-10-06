@@ -11,12 +11,12 @@
   <description>A base POM</description>
 
   <prerequisites>
-    <maven>2.2.1</maven>
+    <maven>3.0</maven>
   </prerequisites>
 
   <properties>
     <jdkLevel>1.7</jdkLevel>
-    <requiredMavenVersion>[2.2.1,)</requiredMavenVersion>
+    <requiredMavenVersion>[3.0,)</requiredMavenVersion>
 
     <!-- Used by the maven-compiler-plugin & maven-resources-plugin -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,28 +29,29 @@
     <cargo.context>${project.artifactId}</cargo.context>
 
     <!-- Plugin versions -->
-    <cargo-maven2-plugin.version>1.4.2</cargo-maven2-plugin.version>
-    <jetty-maven-plugin.version>8.1.11.v20130520</jetty-maven-plugin.version>
-    <liquibase-maven-plugin.version>3.0.1</liquibase-maven-plugin.version>
+    <cargo-maven2-plugin.version>1.4.4</cargo-maven2-plugin.version>
+    <jetty-maven-plugin.version>9.0.6.v20130930</jetty-maven-plugin.version>
+    <liquibase-maven-plugin.version>3.0.5</liquibase-maven-plugin.version>
     <maven-archetype-plugin.version>2.2</maven-archetype-plugin.version>
     <maven-assembly-plugin.version>2.4</maven-assembly-plugin.version>
     <maven-clean-plugin.version>2.5</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
     <maven-dependency-plugin.version>2.8</maven-dependency-plugin.version>
-    <maven-deploy-plugin.version>2.7</maven-deploy-plugin.version>
-    <maven-enforcer-plugin.version>1.2</maven-enforcer-plugin.version>
-    <maven-install-plugin.version>2.4</maven-install-plugin.version>
+    <maven-deploy-plugin.version>2.8</maven-deploy-plugin.version>
+    <maven-enforcer-plugin.version>1.3.1</maven-enforcer-plugin.version>
+    <maven-install-plugin.version>2.5</maven-install-plugin.version>
     <maven-jar-plugin.version>2.4</maven-jar-plugin.version>
-    <maven-javadoc-plugin.version>2.9</maven-javadoc-plugin.version>
+    <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
     <maven-jxr-plugin.version>2.3</maven-jxr-plugin.version>
     <maven-project-info-reports-plugin.version>2.7</maven-project-info-reports-plugin.version>
     <maven-release-plugin.version>2.4.1</maven-release-plugin.version>
     <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
     <maven-scm-plugin.version>1.8.1</maven-scm-plugin.version>
+    <maven-shade-plugin.version>2.1</maven-shade-plugin.version>
     <maven-site-plugin.version>3.3</maven-site-plugin.version>
     <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
-    <maven-surefire-plugin.version>2.15</maven-surefire-plugin.version>
-    <maven-war-plugin.version>2.3</maven-war-plugin.version>
+    <maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
+    <maven-war-plugin.version>2.4</maven-war-plugin.version>
     <versions-maven-plugin.version>2.1</versions-maven-plugin.version>
     <wagon-ssh.version>2.4</wagon-ssh.version>
   </properties>
@@ -234,6 +235,11 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>${maven-shade-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>${maven-site-plugin.version}</version>
           <configuration>
@@ -293,10 +299,7 @@
           <version>${liquibase-maven-plugin.version}</version>
         </plugin>
         <plugin>
-          <!--
-            http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin
-          -->
-          <groupId>org.mortbay.jetty</groupId>
+          <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-maven-plugin</artifactId>
           <version>${jetty-maven-plugin.version}</version>
         </plugin>
